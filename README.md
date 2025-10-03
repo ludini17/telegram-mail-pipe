@@ -87,6 +87,27 @@ You should immediately receive the message via Telegram.
 
 ---
 
+# Other Aliases
+
+By default, the installer offers to pipe all mail for `root` into Telegram.  
+If you want to forward mail from other local users as well, edit `/etc/aliases` and add lines like:
+
+```
+root: "|/usr/bin/telegram-mail"
+www-data: "|/usr/bin/telegram-mail"
+backup: "|/usr/bin/telegram-mail"
+```
+
+Then rebuild the aliases database:
+
+```
+sudo newaliases
+```
+
+From now on, any local mail for those users will also be sent to Telegram.
+
+---
+
 ## Uninstall
 
 To remove the package but keep your configuration:
