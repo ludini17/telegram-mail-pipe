@@ -167,9 +167,10 @@ else
   echo "Existing config detected. Skipping."
 fi
 
-printf "Add/refresh 'root' alias -> pipe? [Y/n]: "
-read ANS_ALIAS
-case "$ANS_ALIAS" in n|N|no|NO) DO_ALIAS=0 ;; *) DO_ALIAS=1 ;; esac
+printf "Add/refresh root alias → pipe? [Y/n]\n\
+Y (default): All system mail for root will be forwarded to Telegram.\n\
+n: Skip this step (root mail will stay in /var/mail/root).\n\
+   You can still use /usr/bin/telegram-mail manually or configure other aliases.\n> "
 
 printf "Force Postfix 'loopback-only' (no outbound SMTP)? [y/N]: "
 read ANS_LOCAL
