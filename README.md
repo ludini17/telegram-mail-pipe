@@ -87,7 +87,7 @@ You should immediately receive the message via Telegram.
 
 ---
 
-# Other Aliases
+## Other Aliases
 
 By default, the installer offers to pipe all mail for `root` into Telegram.  
 If you want to forward mail from other local users as well, edit `/etc/aliases` and add lines like:
