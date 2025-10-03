@@ -1,0 +1,10 @@
+# Build directories
+build_*/
+
+# Debian packages
+*.deb
+
+# Editor/OS cruft
+*~
+*.swp
+.DS_Store
